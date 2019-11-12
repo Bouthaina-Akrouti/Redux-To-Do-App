@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Redux-To-Do-App/static/css/main.0cb12caf.chunk.css",
+    "main.js": "/Redux-To-Do-App/static/js/main.5d6deff3.chunk.js",
+    "main.js.map": "/Redux-To-Do-App/static/js/main.5d6deff3.chunk.js.map",
+    "runtime-main.js": "/Redux-To-Do-App/static/js/runtime-main.fc3d602d.js",
+    "runtime-main.js.map": "/Redux-To-Do-App/static/js/runtime-main.fc3d602d.js.map",
+    "static/js/2.c80cfee5.chunk.js": "/Redux-To-Do-App/static/js/2.c80cfee5.chunk.js",
+    "static/js/2.c80cfee5.chunk.js.map": "/Redux-To-Do-App/static/js/2.c80cfee5.chunk.js.map",
+    "index.html": "/Redux-To-Do-App/index.html",
+    "precache-manifest.36746dae7fbb0137b6ac7cfbda1dd8d8.js": "/Redux-To-Do-App/precache-manifest.36746dae7fbb0137b6ac7cfbda1dd8d8.js",
+    "service-worker.js": "/Redux-To-Do-App/service-worker.js",
+    "static/css/main.0cb12caf.chunk.css.map": "/Redux-To-Do-App/static/css/main.0cb12caf.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc3d602d.js",
+    "static/js/2.c80cfee5.chunk.js",
+    "static/css/main.0cb12caf.chunk.css",
+    "static/js/main.5d6deff3.chunk.js"
+  ]
+}
