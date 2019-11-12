@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
 
-function App() {
+import "./App.css";
+import ToDo from "./ToDo";
+import { deleteItem, completeItem } from "./action/itemsAction";
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="App">
+        <ToDo />
+        {props.items.map(item => (
+          <div key={item.id} style={{ display: "flex", alignItems: "center" }} className="items">
+             <button onClick={() => props.complete(item.id)} className="btn-complete">{item.completed ? "UNDO" : "COMPLETED"}</button>
+             {/* <button onClick={() => props.delete(item.id)} className="btn-delete">DELETE</button> */}
+             <img className="img" src="https://img.icons8.com/material/50/000000/trash.png" onClick={() => props.delete(item.id)}></img>
+           
+            <h2
+              style={{ textDecoration: item.completed ? "line-through" : "none" }}
+              className="item"
+            >
+              {item.saisi}
+            </h2>
+           
+          </div>
+        ))}
+      </div>
+    
   );
 }
+const mapDispatchToProps = dispatch => {
+  return {
+    delete: id => dispatch(deleteItem(id)),
+    complete: id => dispatch(completeItem(id))
+  };
+};
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    items: state.item
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
